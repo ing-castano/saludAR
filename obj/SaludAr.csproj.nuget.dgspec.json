@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Martin\\source\\repos\\SaludAr\\SaludAr.csproj": {}
+    "C:\\Users\\P077903\\Documents\\GitHub\\saludAR\\SaludAr.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Martin\\source\\repos\\SaludAr\\SaludAr.csproj": {
+    "C:\\Users\\P077903\\Documents\\GitHub\\saludAR\\SaludAr.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Martin\\source\\repos\\SaludAr\\SaludAr.csproj",
+        "projectUniqueName": "C:\\Users\\P077903\\Documents\\GitHub\\saludAR\\SaludAr.csproj",
         "projectName": "SaludAr",
-        "projectPath": "C:\\Users\\Martin\\source\\repos\\SaludAr\\SaludAr.csproj",
-        "packagesPath": "C:\\Users\\Martin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Martin\\source\\repos\\SaludAr\\obj\\",
+        "projectPath": "C:\\Users\\P077903\\Documents\\GitHub\\saludAR\\SaludAr.csproj",
+        "packagesPath": "C:\\Users\\P077903\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\P077903\\Documents\\GitHub\\saludAR\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Martin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\P077903\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

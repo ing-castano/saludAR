@@ -9,18 +9,18 @@ namespace SaludAr
         TipoServicioEnum tipoServico;
         string nombreServicio;
         float precioFinal;
-        float valorIVA;
+        float valorIVA = 21;
 
         public Servicio()
         {
         }
 
-        public Servicio(TipoServicioEnum tipoServico, string nombreServicio, float precioFinal, float valorIVA)
+        public Servicio(TipoServicioEnum tipoServico, string nombreServicio, float precioFinal)
         {
             this.TipoServico = tipoServico;
             this.NombreServicio = nombreServicio;
             this.PrecioFinal = precioFinal;
-            this.ValorIVA = valorIVA;
+            
         }
 
         public string NombreServicio { get => nombreServicio; set => nombreServicio = value; }
@@ -29,7 +29,7 @@ namespace SaludAr
         internal TipoServicioEnum TipoServico { get => tipoServico; set => tipoServico = value; }
 
 
-        public float calcularPrecio(float precioFinal, float valorIVA)
+        public virtual float calcularPrecio()
         {
             return precioFinal * valorIVA;
         }

@@ -19,10 +19,10 @@
         public int CantidadVendida {  get => cantidadVendida; set => cantidadVendida = value;}
         
         public override float  calcularPrecio()
-        { 
-
-            float subTotal = porcentajeGanancia + precioLista;
-            float precioIva = (base.ValorIVA / 100) * subTotal ;
+        {
+            float ganancia = (porcentajeGanancia / 100) * precioLista;
+            float subTotal = ganancia + precioLista;
+            float precioIva = (base.ValorIVA / 100) * subTotal;
             float totalUnitario = subTotal + precioIva;
             float precioFinal = totalUnitario * cantidadVendida;
            

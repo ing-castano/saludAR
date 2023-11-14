@@ -6,6 +6,6 @@ namespace SaludAr
 {
     internal enum TipoServicioEnum
     {
-        LABORARORIO, INTERNACION, VENTA
+        LABORATORIO, INTERNACION, VENTA
     }
 }

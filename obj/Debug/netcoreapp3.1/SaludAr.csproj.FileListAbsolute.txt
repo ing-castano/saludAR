@@ -11,3 +11,16 @@ C:\Users\Martin\source\repos\SaludAr\obj\Debug\netcoreapp3.1\SaludAr.csproj.Core
 C:\Users\Martin\source\repos\SaludAr\obj\Debug\netcoreapp3.1\SaludAr.dll
 C:\Users\Martin\source\repos\SaludAr\obj\Debug\netcoreapp3.1\SaludAr.pdb
 C:\Users\Martin\source\repos\SaludAr\obj\Debug\netcoreapp3.1\SaludAr.genruntimeconfig.cache
+C:\Users\selene\Source\Repos\saludAR\bin\Debug\netcoreapp3.1\SaludAr.exe
+C:\Users\selene\Source\Repos\saludAR\bin\Debug\netcoreapp3.1\SaludAr.deps.json
+C:\Users\selene\Source\Repos\saludAR\bin\Debug\netcoreapp3.1\SaludAr.runtimeconfig.json
+C:\Users\selene\Source\Repos\saludAR\bin\Debug\netcoreapp3.1\SaludAr.runtimeconfig.dev.json
+C:\Users\selene\Source\Repos\saludAR\bin\Debug\netcoreapp3.1\SaludAr.dll
+C:\Users\selene\Source\Repos\saludAR\bin\Debug\netcoreapp3.1\SaludAr.pdb
+C:\Users\selene\Source\Repos\saludAR\obj\Debug\netcoreapp3.1\SaludAr.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\selene\Source\Repos\saludAR\obj\Debug\netcoreapp3.1\SaludAr.AssemblyInfoInputs.cache
+C:\Users\selene\Source\Repos\saludAR\obj\Debug\netcoreapp3.1\SaludAr.AssemblyInfo.cs
+C:\Users\selene\Source\Repos\saludAR\obj\Debug\netcoreapp3.1\SaludAr.csproj.CoreCompileInputs.cache
+C:\Users\selene\Source\Repos\saludAR\obj\Debug\netcoreapp3.1\SaludAr.dll
+C:\Users\selene\Source\Repos\saludAR\obj\Debug\netcoreapp3.1\SaludAr.pdb
+C:\Users\selene\Source\Repos\saludAR\obj\Debug\netcoreapp3.1\SaludAr.genruntimeconfig.cache

@@ -5,18 +5,13 @@ using System;
 
 namespace SaludAr
 {
-   internal class ServicioInternacion :Servicio
+   internal class ServicioInternacion :Servicios
     {
     const int VALOR_DIA = 20000;
     string especialidad;
     int diasInternado;
     
-
-    public ServicioInternacion()
-    { 
-    }
-
-    public ServicioInternacion(string especialidad , int diasInternado)
+    public ServicioInternacion(TipoServicioEnum tipoServicio, string especialidad , int diasInternado) : base(tipoServicio, especialidad)
     {
         this.especialidad = especialidad;
         this.diasInternado = diasInternado;
@@ -37,5 +32,9 @@ namespace SaludAr
         return precioFinal;     
         }
 
+    public override string ToString()
+        {
+            return "Tipo: " + TipoServicio + "\n" + "Nombre del Servicio: " + Especialidad + "\n" + "Dias del servicio: " + DiasInternado;
+        }
     }
 }

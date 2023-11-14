@@ -55,9 +55,12 @@ namespace SaludAr
             {
                 Console.WriteLine("A realizar");
                 // if segun nombre de servicio
-                // ServicioVentas nuevoServicio = new ServicioVentas(nombreServicio);
+                 ServicioVenta nuevoServicio = new ServicioVenta(10,13,2);
                 // ServicioInternacion nuevoServicio = new ServicioInternacion(nombreServicio);
                 // ServicioLaboratorio nuevoServicio = new ServicioLaboratorio(nombreServicio);
+
+                float resultado = nuevoServicio.calcularPrecio();
+                Console.WriteLine(resultado);
             }
 
 

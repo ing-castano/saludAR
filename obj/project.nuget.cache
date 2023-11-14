@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "0nenQJUCLUrp5iBz+/+sft28R21JlBMtGysHkeC4+bGnW4JKgR3FzU8X2PUtsdUlSZlIRNnbT/ZVgTt3JYddsA==",
+  "dgSpecHash": "T9xlGkbsDV9jMFksBKk7tLRYkrpDNWQEDJ/lECeBJ1wkPS6ejafZ0IAHZBHEzi2TXTOLoMXeMEm+1v+em4Dsqw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\P077903\\Documents\\GitHub\\saludAR\\SaludAr.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\selene\\Source\\Repos\\saludAR\\SaludAr.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\selene\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\selene\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\selene\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\selene\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.32\\microsoft.netcore.app.host.win-x64.3.1.32.nupkg.sha512"
+  ],
   "logs": []
 }

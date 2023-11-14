@@ -32,6 +32,8 @@ namespace SaludAr
         float precioSinIva = VALOR_DIA * diasInternado;
         float iva = (base.ValorIVA / 2);
         float precioFinal = precioSinIva + (precioSinIva * iva / 100);
+
+
         return precioFinal;     
         }
 

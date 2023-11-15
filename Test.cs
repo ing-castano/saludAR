@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Numerics;
 
 namespace SaludAr
 {
@@ -17,10 +18,16 @@ namespace SaludAr
                 switch (opcion)
                 {
                     case 1:
-                        // A realizar
                         Console.Write("¿Qué tipo de servicio desea agregar? (Internacion/Laboratorio/Medicamento):");
                         string tipoServ = Console.ReadLine();
                         TipoServicioEnum? tipoServicio = ValidarServicio(tipoServ);
+                        while (tipoServicio == null)
+                        {
+                            Console.WriteLine("Error en el ingreso. Intente nuevamente...");
+                            Console.Write("¿Qué tipo de servicio desea agregar? (Internacion/Laboratorio/Medicamento):");
+                            tipoServ = Console.ReadLine();
+                            tipoServicio = ValidarServicio(tipoServ);
+                        }
                         AgregarServicio(tipoServicio);
                         break;
                     case 2:
@@ -28,7 +35,8 @@ namespace SaludAr
                         MostrarServicios(servicios);
                         break;
                     case 3:
-                        // A realizar
+                        montoTotalFacturado(servicios);
+                        cantServiciosSimples(servicios);
                         break;
                     default:
                         Console.WriteLine("Esa opción no existe. Ingrese nuevamente\n");
@@ -68,9 +76,6 @@ namespace SaludAr
 
                 else if (tipoServ.ToLower().Equals("medicamento"))
                     tipoServicio = TipoServicioEnum.VENTA;
-
-                else
-                    throw new ApplicationException("Servicio Invalido");
                     
                 return tipoServicio;
             }
@@ -81,8 +86,25 @@ namespace SaludAr
                 switch (tipoServicio)
                 {
                     case TipoServicioEnum.LABORATORIO:
-                        // Servicios s = new ServicioInternacion(TODO);
-                        break;
+                        {
+                            Console.Write("Ingrese el nombre del servicio de Laboratorio: ");
+                            string nombreServicio = Console.ReadLine();
+                            Console.Write("Ingrese cantidad de días del servicio de Laboratorio: ");
+                            int diasDeProcesamiento = int.Parse(Console.ReadLine());
+                            string compl;
+                            do
+                            {
+                                Console.Write("Ingrese nivel de complejidad (numero del 1 al 5): ");
+                                compl = Console.ReadLine();
+                            } while ( !(compl.Equals("1") || compl.Equals("2") || compl.Equals("3") || compl.Equals("4") || compl.Equals("5")) );
+                            /*
+                            ComplejidadEnum complejidad = validarComplejidad(compl);
+
+                            servicios.Add(new ServicioLaboratorio(TipoServicioEnum.LABORATORIO, nombreServicio, diasDeProcesamiento, complejidad));
+                            Console.WriteLine("Servicio Agregado correctamente\n");
+                            */
+                            break;
+                        }
 
                     case TipoServicioEnum.INTERNACION:
                         {
@@ -117,7 +139,47 @@ namespace SaludAr
                         break;
                 }
             }
+            /*
+            ComplejidadEnum validarComplejidad (string compl)
+            {
+                ComplejidadEnum complejidad;
 
+                switch (compl)
+                {
+                    case "1":
+                        {
+                            complejidad = ComplejidadEnum.UNO;
+                            break;
+                        }
+                    case "2":
+                        {
+                            complejidad = ComplejidadEnum.DOS;
+                            break;
+                        }
+                    case "3":
+                        {
+                            complejidad = ComplejidadEnum.TRES;
+                            break;
+                        }
+                    case "4":
+                        {
+                            complejidad = ComplejidadEnum.CUATRO;
+                            break;
+                        }
+                    case "5":
+                        {
+                            complejidad = ComplejidadEnum.CINCO;
+                            break;
+                        }
+                    default:
+                        {
+                            break;
+                        }
+                }
+                return complejidad;
+
+            }
+            */
             void MostrarServicios(List<Servicios> servicios)
             {
                 foreach (Servicios servicio in servicios)
@@ -127,6 +189,38 @@ namespace SaludAr
                     string resultado = String.Format("{0:$#,##0.00;($#,##0.00);Zero}", precioFinal); 
                     Console.WriteLine("Precio final: " + resultado + "\n" );
                 }
+            }
+
+            void montoTotalFacturado(List<Servicios> servicios)
+            {
+                float montoTotalFacturado = 0F;
+
+                foreach (Servicios servicio in servicios)
+                {
+                    float precioFinal = servicio.calcularPrecio();
+                    montoTotalFacturado += precioFinal;
+                }
+                string resultado = String.Format("{0:$#,##0.00;($#,##0.00);Zero}", montoTotalFacturado);
+                Console.WriteLine("\nMonto Total Facturado: " + resultado + "\n");
+            }
+
+            void cantServiciosSimples(List<Servicios> servicios)
+            {
+                int count = 0;
+
+                foreach (Servicios servicio in servicios)
+                {
+                    /* ...A la espera creacion clase ServicioLaboratorio...
+                     
+                    if ( servicio.GetType() == typeof(ServicioLaboratorio) )
+                    {
+                        if (servicio.ComplejidadEnum < 3)
+                            count++;
+                    }
+
+                    */
+                }
+                Console.WriteLine("Cantidad de Servicios Simples: " + count + "\n");
             }
         }
 

@@ -8,8 +8,8 @@ namespace SaludAr
         int diasProcesamiento;
         ComplejidadEnum complejidad;
 
-        public ServicioLaboratorio(string nombreServicio, int diasProcesamiento, ComplejidadEnum complejidad)
-            : base(TipoServicioEnum.LABORATORIO, nombreServicio)
+        public ServicioLaboratorio(TipoServicioEnum tipoServicio, string nombreServicio, int diasProcesamiento, ComplejidadEnum complejidad)
+            : base(tipoServicio, nombreServicio)
         {
             this.diasProcesamiento = diasProcesamiento;
             this.complejidad = complejidad;
@@ -35,12 +35,8 @@ namespace SaludAr
         public override string ToString()
         {
             return "Tipo: " + TipoServicio + "\n" + "Nombre del Servicio: " + NombreServicio +
-                   "\n" + "Dias de procesamiento: " + DiasProcesamiento + "\n" + "Complejidad: " + Complejidad;
+                   "\n" + "Dias de procesamiento: " + DiasProcesamiento + "\n" + "Complejidad: " + (int)Complejidad;
         }
     }
 
-    internal enum ComplejidadEnum
-    {
-        UNO, DOS, TRES, CUATRO, CINCO
-    }
 }

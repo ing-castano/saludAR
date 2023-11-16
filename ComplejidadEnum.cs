@@ -4,8 +4,13 @@ using System.Text;
 
 namespace SaludAr
 {
-    internal enum ComplejidadEnum
+    internal enum ComplejidadEnum: int
     {
-        UNO, DOS, TRES, CUATRO, CINCO
+        UNO = 1, 
+        DOS = 2, 
+        TRES = 3, 
+        CUATRO = 4,
+        CINCO = 5,
+        UNKNOWN = 0,
     }
 }

@@ -97,12 +97,12 @@ namespace SaludAr
                                 Console.Write("Ingrese nivel de complejidad (numero del 1 al 5): ");
                                 compl = Console.ReadLine();
                             } while ( !(compl.Equals("1") || compl.Equals("2") || compl.Equals("3") || compl.Equals("4") || compl.Equals("5")) );
-                            /*
+                            
                             ComplejidadEnum complejidad = validarComplejidad(compl);
 
                             servicios.Add(new ServicioLaboratorio(TipoServicioEnum.LABORATORIO, nombreServicio, diasDeProcesamiento, complejidad));
                             Console.WriteLine("Servicio Agregado correctamente\n");
-                            */
+                            
                             break;
                         }
 
@@ -139,7 +139,7 @@ namespace SaludAr
                         break;
                 }
             }
-            /*
+            
             ComplejidadEnum validarComplejidad (string compl)
             {
                 ComplejidadEnum complejidad;
@@ -173,13 +173,14 @@ namespace SaludAr
                         }
                     default:
                         {
+                            complejidad = ComplejidadEnum.UNKNOWN;
                             break;
                         }
                 }
                 return complejidad;
 
             }
-            */
+            
             void MostrarServicios(List<Servicios> servicios)
             {
                 foreach (Servicios servicio in servicios)
@@ -207,18 +208,19 @@ namespace SaludAr
             void cantServiciosSimples(List<Servicios> servicios)
             {
                 int count = 0;
+                int compl;
 
                 foreach (Servicios servicio in servicios)
                 {
-                    /* ...A la espera creacion clase ServicioLaboratorio...
-                     
+                   
                     if ( servicio.GetType() == typeof(ServicioLaboratorio) )
                     {
-                        if (servicio.ComplejidadEnum < 3)
+                        compl = (int)(((ServicioLaboratorio)servicio).Complejidad);
+                        if ( ((ServicioLaboratorio)servicio).Complejidad < ComplejidadEnum.TRES)
                             count++;
                     }
 
-                    */
+                   
                 }
                 Console.WriteLine("Cantidad de Servicios Simples: " + count + "\n");
             }

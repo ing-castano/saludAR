@@ -215,7 +215,6 @@ namespace SaludAr
                    
                     if ( servicio.GetType() == typeof(ServicioLaboratorio) )
                     {
-                        compl = (int)(((ServicioLaboratorio)servicio).Complejidad);
                         if ( ((ServicioLaboratorio)servicio).Complejidad < ComplejidadEnum.TRES)
                             count++;
                     }
